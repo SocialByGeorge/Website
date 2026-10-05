@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Social By George | Social Media Management for Beauty, Grooming & Wellness</title>
+  <meta name="description" content="Premium social media strategy, content and management for hair, beauty, grooming, aesthetics and wellness businesses across Essex and online. Based in Maldon, Essex.">
+  <meta name="theme-color" content="#7C2E4C">
+  <meta property="og:title" content="Social By George">
+  <meta property="og:description" content="Your work is premium. Your social should be too.">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root{
+      --ivory:#F5F0EA;
+      --paper:#FCF9F5;
+      --ink:#111111;
+      --berry:#7C2E4C;
+      --berry-2:#9D4566;
+      --berry-dark:#4F1C31;
+      --blush:#E8CCD5;
+      --taupe:#B7AAA1;
+      --stone:#D9D0C9;
+      --muted:#625A56;
+      --white:#FFFFFF;
+      --line:rgba(17,17,17,.14);
+      --line-light:rgba(255,255,255,.16);
+      --shadow:0 24px 70px rgba(44,22,30,.12);
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--ivory);
+      color:var(--ink);
+      font-family:var(--sans);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    .container{width:min(1180px,calc(100% - 40px));margin:auto}
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.21em;
+      font-size:.7rem;
+      font-weight:850;
+      color:var(--berry);
+    }
+    .display{
+      font-family:var(--serif);
+      font-weight:600;
+      letter-spacing:-.055em;
+      line-height:.91;
+      margin:0;
+    }
+    .body-copy{line-height:1.68;color:var(--muted)}
+    .muted{color:var(--muted)}
+    .berry{color:var(--berry)}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:52px;
+      padding:0 22px;
+      border-radius:999px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.75rem;
+      font-weight:850;
+      border:1.5px solid var(--ink);
+      transition:.22s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 8px 0 var(--ink)}
+    .btn-dark{background:var(--ink);color:#fff}
+    .btn-berry{background:var(--berry);color:#fff;border-color:var(--berry)}
+    .btn-light{background:var(--paper)}
+    .btn-white{background:#fff;color:var(--ink);border-color:#fff}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.55);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.68rem;
+      font-weight:850;
+    }
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:30px;
+      margin-bottom:44px;
+    }
+    .section-head h2{
+      font-size:clamp(3rem,6.3vw,6.7rem);
+      max-width:850px;
+    }
+    .section-head p{max-width:460px;line-height:1.65;color:var(--muted)}
+    section{padding:96px 0}
+
+    /* nav */
+    .nav{
+      position:sticky;top:0;z-index:80;
+      border-bottom:1px solid var(--line);
+      background:rgba(245,240,234,.91);
+      backdrop-filter:blur(18px);
+    }
+    .nav-inner{
+      min-height:76px;
+      display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+    .brand{
+      font-family:var(--serif);
+      font-size:1.45rem;
+      font-weight:700;
+      line-height:.84;
+      letter-spacing:-.02em;
+    }
+    .brand span{
+      display:block;
+      margin-top:6px;
+      font-family:var(--sans);
+      font-size:.55rem;
+      letter-spacing:.34em;
+    }
+    .nav-links{
+      display:flex;align-items:center;gap:22px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.7rem;
+      font-weight:850;
+    }
+    .nav-links a{position:relative}
+    .nav-links a:after{
+      content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--berry);transition:.2s
+    }
+    .nav-links a:hover:after{right:0}
+    .menu{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer}
+
+    /* launch bar */
+    .launchbar{
+      background:var(--berry-dark);
+      color:#fff;
+      padding:10px 0;
+      text-align:center;
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      font-weight:800;
+    }
+    .launchbar strong{color:var(--blush)}
+
+    /* hero */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:88px 0 74px;
+      min-height:770px;
+      background:
+        radial-gradient(circle at 84% 20%,rgba(124,46,76,.15),transparent 28%),
+        radial-gradient(circle at 70% 76%,rgba(232,204,213,.58),transparent 31%),
+        var(--ivory);
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      width:470px;height:470px;
+      right:-150px;top:44px;
+      border-radius:46% 54% 48% 52%;
+      background:linear-gradient(145deg,var(--berry),rgba(232,204,213,.8));
+      transform:rotate(22deg);
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      width:350px;height:350px;
+      right:105px;bottom:-125px;
+      border:42px solid rgba(255,255,255,.42);
+      border-radius:50%;
+      background:rgba(124,46,76,.11);
+      transform:rotate(-15deg);
+    }
+    .hero-grid{
+      position:relative;z-index:2;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:50px;
+      align-items:center;
+    }
+    .hero h1{font-size:clamp(4.2rem,8.4vw,8.7rem);max-width:820px}
+    .hero h1 span{display:block;color:var(--berry)}
+    .hero-copy{max-width:650px;font-size:1.12rem;line-height:1.65;margin:27px 0 28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-meta{
+      display:flex;gap:18px;flex-wrap:wrap;
+      margin-top:28px;
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-weight:850;
+    }
+    .hero-card{min-height:560px;display:flex;align-items:center;justify-content:center}
+    .editorial-card{
+      position:relative;
+      width:min(470px,92%);
+      min-height:485px;
+      padding:42px;
+      overflow:hidden;
+      background:var(--paper);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      transform:rotate(3deg);
+    }
+    .editorial-card:before{
+      content:"";
+      position:absolute;
+      width:310px;height:82px;
+      right:-60px;top:58px;
+      background:var(--berry);
+      transform:rotate(-12deg);
+    }
+    .editorial-card:after{
+      content:"";
+      position:absolute;
+      width:245px;height:245px;
+      left:-95px;bottom:-80px;
+      border:1px solid rgba(17,17,17,.15);
+      border-radius:50%;
+    }
+    .editorial-card .mini{
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-size:.68rem;
+      font-weight:850;
+    }
+    .editorial-card h3{
+      font-family:var(--serif);
+      font-size:4.1rem;
+      line-height:.93;
+      letter-spacing:-.05em;
+      margin:92px 0 18px;
+      max-width:330px;
+    }
+    .editorial-card h3 span{color:var(--berry)}
+    .editorial-card p{max-width:335px;line-height:1.58}
+    .scribble{
+      position:absolute;
+      right:28px;bottom:30px;
+      transform:rotate(-7deg);
+      font-family:"Brush Script MT","Segoe Script",cursive;
+      font-size:1.9rem;
+      color:var(--berry-dark);
+    }
+
+    /* marquee */
+    .marquee{overflow:hidden;background:var(--ink);color:#fff}
+    .track{
+      display:flex;
+      width:max-content;
+      gap:34px;
+      padding:16px 0;
+      animation:marquee 27s linear infinite;
+      font-family:var(--serif);
+      font-size:1.35rem;
+      font-weight:600;
+    }
+    .track span{white-space:nowrap}.track b{color:var(--blush)}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    /* audience */
+    .audience{background:var(--ink);color:#fff}
+    .audience .section-head p{color:#cfc6c3}
+    .audience-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .audience-card{
+      min-height:190px;padding:22px;
+      border:1px solid var(--line-light);
+      background:linear-gradient(160deg,#1b1b1b,#26191e);
+      display:flex;flex-direction:column;justify-content:end;
+      transition:.22s;
+    }
+    .audience-card:hover{background:var(--berry-dark);transform:translateY(-6px)}
+    .audience-card .num{color:var(--blush);font-size:.7rem;letter-spacing:.14em;font-weight:850}
+    .audience-card h3{font-family:var(--serif);font-size:1.5rem;margin:12px 0 4px}
+    .audience-card p{font-size:.83rem;line-height:1.48;color:#d9d2cf}
+
+    /* recognise */
+    .recognise{background:var(--paper)}
+    .recognise-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .recognise h2{font-size:clamp(3.4rem,6.3vw,6.5rem)}
+    .recognise-list{display:grid;gap:14px}
+    .recognise-item{
+      display:grid;grid-template-columns:auto 1fr;gap:15px;
+      padding:20px 0;border-top:1px solid var(--line)
+    }
+    .recognise-item span{
+      width:38px;height:38px;display:grid;place-items:center;
+      border-radius:50%;background:var(--blush);color:var(--berry-dark);font-weight:900
+    }
+    .recognise-item strong{font-family:var(--serif);font-size:1.4rem}
+    .recognise-item p{margin:5px 0 0;color:var(--muted);line-height:1.55}
+
+    /* results */
+    .case{background:var(--berry-dark);color:#fff}
+    .case-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:55px;align-items:center}
+    .case h2{font-size:clamp(3.6rem,6.5vw,6.8rem)}
+    .case-copy{line-height:1.66;color:#e3d9dd}
+    .case-badge{
+      display:inline-flex;
+      padding:8px 12px;margin:14px 0 22px;
+      border-radius:999px;border:1px solid rgba(255,255,255,.25);
+      text-transform:uppercase;letter-spacing:.1em;font-size:.64rem;font-weight:850
+    }
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .stat{
+      position:relative;
+      min-height:160px;padding:27px;
+      background:var(--ivory);color:var(--ink)
+    }
+    .stat strong{font-family:var(--serif);font-size:3.25rem;display:block;line-height:1}
+    .stat span{display:block;margin-top:10px;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;font-weight:850}
+    .stat:after{content:"↗";position:absolute;right:18px;top:14px;color:var(--berry);font-size:1.6rem}
+    .case-note{margin-top:15px;font-size:.78rem;color:#bfaeb5;line-height:1.5}
+
+    /* before after */
+    .beforeafter{background:var(--ivory)}
+    .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .ba-card{
+      border:1px solid var(--line);
+      padding:34px;
+      background:var(--paper);
+      min-height:360px;
+    }
+    .ba-card.after{background:var(--blush)}
+    .ba-card h3{font-family:var(--serif);font-size:2.2rem;margin:12px 0 20px}
+    .ba-card ul{padding:0;margin:0;list-style:none;display:grid;gap:14px}
+    .ba-card li{padding-bottom:14px;border-bottom:1px solid rgba(17,17,17,.13);line-height:1.5}
+    .ba-card li:before{content:"—";margin-right:8px;color:var(--berry);font-weight:900}
+
+    /* pricing */
+    .services{background:var(--paper)}
+    .founding{
+      display:flex;justify-content:space-between;gap:20px;align-items:center;
+      margin-bottom:24px;padding:18px 20px;
+      background:var(--ink);color:#fff;border-radius:2px
+    }
+    .founding strong{font-family:var(--serif);font-size:1.45rem}
+    .founding span{color:#d8d0cc;font-size:.86rem;line-height:1.5;max-width:700px}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price-card{
+      position:relative;
+      min-height:565px;
+      display:flex;flex-direction:column;
+      padding:32px;
+      background:var(--ivory);
+      border:1px solid var(--line);
+      transition:.22s;
+    }
+    .price-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+    .price-card.featured{background:var(--berry-dark);color:#fff}
+    .tag{
+      position:absolute;top:18px;right:18px;
+      padding:7px 10px;border-radius:999px;border:1px solid currentColor;
+      text-transform:uppercase;letter-spacing:.1em;font-size:.62rem;font-weight:850
+    }
+    .price-card h3{font-family:var(--serif);font-size:2.35rem;margin:30px 0 8px}
+    .price{font-family:var(--serif);font-size:3.8rem;line-height:1;margin:10px 0 20px}
+    .price small{font-family:var(--sans);font-size:.84rem;font-weight:500}
+    .price-card p{line-height:1.55}
+    .feature-list{display:grid;gap:10px;margin:22px 0 30px;padding:0;list-style:none}
+    .feature-list li:before{content:"✓";margin-right:10px;color:var(--berry);font-weight:900}
+    .featured .feature-list li:before{color:var(--blush)}
+    .price-card .btn{margin-top:auto}
+    .scope-note{
+      margin-top:20px;padding:18px 20px;
+      border:1px dashed var(--taupe);
+      background:rgba(255,255,255,.45);
+      font-size:.88rem;line-height:1.55;color:var(--muted)
+    }
+
+    /* comparison */
+    .compare{background:var(--ivory)}
+    .table-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--paper)}
+    table{width:100%;border-collapse:collapse;min-width:760px}
+    th,td{padding:17px 18px;border-bottom:1px solid var(--line);text-align:center}
+    th:first-child,td:first-child{text-align:left}
+    th{background:var(--ink);color:#fff;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+    th:first-child{min-width:250px}
+    td:first-child{font-weight:750}
+    .tick{color:var(--berry);font-weight:950;font-size:1.05rem}
+    .dash{color:#aaa}
+
+    /* monthly workflow */
+    .monthly{background:var(--ink);color:#fff}
+    .monthly .section-head p{color:#cbc3c0}
+    .deliver-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .deliver{
+      min-height:220px;
+      padding:24px;
+      border:1px solid var(--line-light);
+      background:#171717;
+      display:flex;flex-direction:column;justify-content:space-between
+    }
+    .deliver .icon{font-size:1.6rem;color:var(--blush)}
+    .deliver h3{font-family:var(--serif);font-size:1.6rem;margin:18px 0 8px}
+    .deliver p{color:#cfc7c4;line-height:1.55;font-size:.88rem}
+
+    /* first 30 days */
+    .first30{background:var(--paper)}
+    .weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .week{position:relative;padding:28px;border-top:3px solid var(--berry);background:var(--ivory);min-height:250px}
+    .week .weekno{font-family:var(--serif);font-size:3rem;color:var(--berry)}
+    .week h3{font-family:var(--serif);font-size:1.65rem;margin:10px 0}
+    .week p{color:var(--muted);line-height:1.55;font-size:.9rem}
+
+    /* portfolio */
+    .portfolio{background:var(--ivory)}
+    .portfolio-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:14px}
+    .sample{
+      position:relative;
+      min-height:330px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:var(--paper);
+      padding:28px;
+    }
+    .sample.large{min-height:680px}
+    .sample.berry{background:var(--berry);color:#fff}
+    .sample.blush{background:var(--blush)}
+    .sample.black{background:var(--ink);color:#fff}
+    .sample .label{
+      display:inline-flex;padding:7px 10px;border:1px solid currentColor;border-radius:999px;
+      font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:850
+    }
+    .sample h3{
+      font-family:var(--serif);
+      font-size:clamp(2.3rem,4vw,4.6rem);
+      line-height:.95;
+      letter-spacing:-.04em;
+      margin:35px 0 14px;
+    }
+    .sample p{max-width:360px;line-height:1.55}
+    .sample .mock-ui{
+      position:absolute;left:28px;right:28px;bottom:28px;
+      display:grid;gap:9px
+    }
+    .line{height:9px;background:rgba(17,17,17,.15);border-radius:99px}
+    .black .line,.berry .line{background:rgba(255,255,255,.22)}
+    .line.s{width:55%}.line.m{width:78%}
+    .reel-ring{
+      position:absolute;
+      width:170px;height:170px;right:-30px;bottom:-20px;
+      border:26px solid rgba(255,255,255,.25);border-radius:50%
+    }
+
+    /* why and fit */
+    .why{background:var(--paper)}
+    .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+    .why h2{font-size:clamp(3.4rem,6.4vw,6.6rem)}
+    .why-card{background:var(--blush);padding:40px;border:1px solid rgba(124,46,76,.2);box-shadow:14px 14px 0 var(--berry)}
+    .why-card p{font-size:1.05rem;line-height:1.65}
+    .values{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:50px}
+    .fit-card{padding:32px;border:1px solid var(--line);background:var(--ivory)}
+    .fit-card h3{font-family:var(--serif);font-size:2rem;margin:8px 0 18px}
+    .fit-card ul{list-style:none;padding:0;margin:0;display:grid;gap:13px}
+    .fit-card li{line-height:1.5}
+    .fit-card li:before{content:"✓";margin-right:9px;color:var(--berry);font-weight:900}
+    .fit-card.not li:before{content:"×";color:#777}
+
+    /* client input/security */
+    .collab{background:var(--ivory)}
+    .collab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .collab-card{padding:30px;border:1px solid var(--line);background:var(--paper)}
+    .collab-card h3{font-family:var(--serif);font-size:1.75rem;margin:14px 0 10px}
+    .collab-card p{line-height:1.62;color:var(--muted)}
+    .security-strip{
+      margin-top:20px;padding:22px;
+      background:var(--ink);color:#fff;
+      display:flex;gap:20px;justify-content:space-between;align-items:center
+    }
+    .security-strip p{margin:0;line-height:1.55;color:#d8d1ce;max-width:820px}
+
+    /* success metrics */
+    .metrics{background:var(--berry-dark);color:#fff}
+    .metric-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .metric{
+      min-height:165px;padding:22px;
+      border:1px solid rgba(255,255,255,.18);
+      display:flex;flex-direction:column;justify-content:space-between
+    }
+    .metric strong{font-family:var(--serif);font-size:1.55rem}
+    .metric span{font-size:.77rem;color:#d5c5cb;line-height:1.45}
+
+    /* content day */
+    .contentday{background:var(--paper)}
+    .contentday-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .contentday h2{font-size:clamp(3.5rem,6.2vw,6.4rem)}
+    .content-box{
+      position:relative;padding:38px;background:var(--ink);color:#fff;overflow:hidden
+    }
+    .content-box:after{
+      content:"";
+      position:absolute;right:-80px;top:-60px;width:220px;height:220px;border-radius:50%;
+      background:var(--berry);opacity:.8
+    }
+    .content-box ul{position:relative;z-index:2;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+    .content-box li{padding-bottom:13px;border-bottom:1px solid rgba(255,255,255,.14)}
+    .content-box li:before{content:"↳";margin-right:10px;color:var(--blush)}
+
+    /* about */
+    .about{background:var(--ivory)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .about h2{font-size:clamp(3.5rem,6.6vw,6.8rem)}
+    .about-story{border-left:4px solid var(--berry);padding-left:28px;font-size:1.06rem;line-height:1.73}
+    .about-note{margin-top:20px;font-family:var(--serif);font-size:2rem;color:var(--berry)}
+
+    /* process */
+    .process{background:var(--paper)}
+    .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+    .step{border-top:2px solid var(--ink);padding:20px 8px 0 0}
+    .step .n{font-family:var(--serif);font-size:2.2rem;color:var(--berry)}
+    .step h3{margin:12px 0 8px;font-family:var(--serif);font-size:1.42rem}
+    .step p{font-size:.84rem;line-height:1.5;color:var(--muted)}
+
+    /* areas */
+    .areas{background:var(--ink);color:#fff}
+    .areas-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
+    .areas h2{font-size:clamp(3.5rem,6.3vw,6.5rem)}
+    .towns{display:flex;flex-wrap:wrap;gap:10px}
+    .towns span{padding:10px 14px;border:1px solid rgba(255,255,255,.18);border-radius:999px;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}
+    .areas p{color:#cfc7c4;line-height:1.62}
+
+    /* audit */
+    .audit{
+      position:relative;
+      overflow:hidden;
+      background:var(--blush);
+      text-align:center;
+    }
+    .audit:before{
+      content:"AUDIT";
+      position:absolute;
+      left:50%;top:50%;
+      transform:translate(-50%,-50%);
+      font-family:var(--serif);
+      font-size:24vw;
+      color:rgba(124,46,76,.06);
+      letter-spacing:-.07em;
+      white-space:nowrap
+    }
+    .audit-inner{position:relative;z-index:2}
+    .audit h2{font-size:clamp(3.8rem,7vw,7.4rem);max-width:950px;margin:0 auto 24px}
+    .audit p{max-width:680px;margin:0 auto 28px;line-height:1.65}
+
+    /* faq */
+    .faq{background:var(--ivory)}
+    .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
+    .faq h2{font-size:clamp(3.5rem,6.4vw,6.6rem)}
+    details{border-top:1px solid var(--ink);padding:20px 0}
+    summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-weight:850}
+    summary:after{content:"+";color:var(--berry);font-size:1.35rem}
+    details[open] summary:after{content:"–"}
+    details p{margin:14px 0 0;line-height:1.62;color:var(--muted)}
+
+    /* CTA */
+    .cta{
+      position:relative;overflow:hidden;
+      background:var(--berry);color:#fff;
+      padding:105px 0;text-align:center
+    }
+    .cta:before,.cta:after{
+      content:"";position:absolute;width:470px;height:110px;border-radius:50%;
+      background:var(--blush);opacity:.2
+    }
+    .cta:before{left:-150px;top:28px;transform:rotate(-15deg)}
+    .cta:after{right:-145px;bottom:30px;transform:rotate(18deg)}
+    .cta-inner{position:relative;z-index:2}
+    .cta h2{font-size:clamp(4rem,8vw,8rem);max-width:980px;margin:0 auto 24px}
+    .cta p{max-width:650px;margin:0 auto 28px;line-height:1.62;color:#f2e6eb}
+
+    /* legal */
+    .legal{background:#efe9e2;padding:52px 0}
+    .legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .legal details{border:1px solid var(--line);background:rgba(255,255,255,.5);padding:18px}
+    .legal details p{font-size:.86rem}
+
+    footer{border-top:1px solid var(--line);background:var(--ivory);padding:28px 0 92px}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;font-weight:850}
+
+    /* sticky mobile CTA */
+    .mobile-cta{
+      display:none;
+      position:fixed;left:10px;right:10px;bottom:10px;z-index:90;
+      grid-template-columns:1fr 1fr;gap:8px;
+      padding:8px;border-radius:16px;
+      background:rgba(17,17,17,.92);
+      backdrop-filter:blur(14px);
+      box-shadow:0 12px 40px rgba(0,0,0,.22)
+    }
+    .mobile-cta a{
+      min-height:46px;border-radius:10px;display:grid;place-items:center;
+      font-size:.7rem;font-weight:850;text-transform:uppercase;letter-spacing:.07em
+    }
+    .mobile-cta a:first-child{background:#fff;color:var(--ink)}
+    .mobile-cta a:last-child{background:var(--berry);color:#fff}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    @media(max-width:1040px){
+      .nav-links{display:none}.menu{display:block}
+      .hero-grid,.recognise-grid,.case-grid,.why-grid,.contentday-grid,.about-grid,.faq-grid,.areas-grid{grid-template-columns:1fr}
+      .hero-card{min-height:500px}
+      .audience-grid{grid-template-columns:repeat(3,1fr)}
+      .pricing{grid-template-columns:1fr}
+      .deliver-grid{grid-template-columns:repeat(2,1fr)}
+      .weeks{grid-template-columns:repeat(2,1fr)}
+      .portfolio-grid{grid-template-columns:1fr 1fr}
+      .sample.large{grid-row:span 2}
+      .collab-grid{grid-template-columns:1fr}
+      .metric-grid{grid-template-columns:repeat(3,1fr)}
+      .steps{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:700px){
+      .container{width:min(100% - 24px,1180px)}
+      section{padding:72px 0}
+      .hero{padding:62px 0 55px;min-height:auto}
+      .hero h1{font-size:4.15rem}
+      .hero-card{min-height:430px}
+      .editorial-card{padding:30px;min-height:405px}
+      .editorial-card h3{font-size:3.15rem;margin-top:72px}
+      .section-head{align-items:start;flex-direction:column}
+      .audience-grid{grid-template-columns:repeat(2,1fr)}
+      .stats,.ba-grid,.fit-grid,.legal-grid{grid-template-columns:1fr}
+      .deliver-grid,.weeks,.portfolio-grid,.metric-grid,.steps{grid-template-columns:1fr}
+      .sample.large{min-height:430px;grid-row:auto}
+      .sample{min-height:310px}
+      .founding{align-items:flex-start;flex-direction:column}
+      .security-strip{align-items:flex-start;flex-direction:column}
+      .nav .btn{display:none}
+      .mobile-cta{display:grid}
+      footer{padding-bottom:110px}
+      .cta h2{font-size:4.15rem}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="launchbar">
+    <strong>Founding client rates now open</strong> · Maldon & wider Essex · UK-wide online
+  </div>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">SOCIAL <span>BY GEORGE</span></a>
+      <div class="nav-links">
+        <a href="#who">Who I work with</a>
+        <a href="#results">Results</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQs</a>
+      </div>
+      <a class="btn btn-berry" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM @socialbygeorge ↗</a>
+      <button class="menu" aria-label="Open navigation">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Social media management for beauty, grooming & wellness</div>
+        <h1 class="display">YOUR WORK IS PREMIUM. <span>YOUR SOCIAL SHOULD BE TOO.</span></h1>
+        <p class="hero-copy">
+          Strategy, content and social media management for businesses that want to look stronger online, stay consistent and turn more of the right attention into trust, enquiries and bookings.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-berry" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM “AUDIT” →</a>
+          <a class="btn btn-light" href="#services">VIEW SERVICES</a>
+        </div>
+        <div class="hero-meta"><span>Strategy</span><span>Content</span><span>Management</span><span>Analytics</span></div>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="editorial-card">
+          <div class="mini">Social By George · Essex + online</div>
+          <h3>BEAUTY BRANDS, <span>BRIGHTER ONLINE.</span></h3>
+          <p>Clear strategy. Better content. Stronger visibility. Social media that feels as considered as the service you deliver.</p>
+          <div class="scribble">strategy first.</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee">
+    <div class="track">
+      <span>HAIR <b>✦</b> NAILS <b>✦</b> LASHES <b>✦</b> AESTHETICS <b>✦</b> BARBERS <b>✦</b> IV CLINICS <b>✦</b> WELLNESS <b>✦</b></span>
+      <span>HAIR <b>✦</b> NAILS <b>✦</b> LASHES <b>✦</b> AESTHETICS <b>✦</b> BARBERS <b>✦</b> IV CLINICS <b>✦</b> WELLNESS <b>✦</b></span>
+    </div>
+  </div>
+
+  <section class="audience" id="who">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">BUILT FOR SERVICE BUSINESSES THAT LIVE ON REPUTATION.</h2>
+        <p>From solo specialists to established salons and clinics, Social By George is designed for businesses where trust, results and presentation matter.</p>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card reveal"><div class="num">01</div><h3>Hair</h3><p>Stylists, colourists, extension specialists and salons.</p></div>
+        <div class="audience-card reveal"><div class="num">02</div><h3>Nails</h3><p>Nail techs, studios and premium beauty bars.</p></div>
+        <div class="audience-card reveal"><div class="num">03</div><h3>Lashes & Brows</h3><p>Lash artists, brow specialists and beauty professionals.</p></div>
+        <div class="audience-card reveal"><div class="num">04</div><h3>Aesthetics</h3><p>Skin, injectables and aesthetics-led clinics.</p></div>
+        <div class="audience-card reveal"><div class="num">05</div><h3>Grooming</h3><p>Barbers and modern men's grooming businesses.</p></div>
+        <div class="audience-card reveal"><div class="num">06</div><h3>Wellness</h3><p>IV clinics, wellness studios and health-led brands.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recognise">
+    <div class="container recognise-grid">
+      <div class="reveal">
+        <div class="eyebrow">Sound familiar?</div>
+        <h2 class="display">YOU'RE GOOD AT THE WORK. SOCIAL MEDIA IS THE BIT THAT KEEPS SLIPPING.</h2>
+      </div>
+      <div class="recognise-list reveal">
+        <div class="recognise-item"><span>1</span><div><strong>Your clients come first.</strong><p>Posting gets pushed back because you are actually delivering the service.</p></div></div>
+        <div class="recognise-item"><span>2</span><div><strong>Your page does not reflect your standard.</strong><p>Your real-life work looks premium, but Instagram feels inconsistent or unfinished.</p></div></div>
+        <div class="recognise-item"><span>3</span><div><strong>You are posting reactively.</strong><p>There is no clear plan, content system or reason behind what goes out.</p></div></div>
+        <div class="recognise-item"><span>4</span><div><strong>You want attention to lead somewhere.</strong><p>More reach is useful — but the real goal is stronger trust, enquiries and bookings.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case" id="results">
+    <div class="container case-grid">
+      <div class="reveal">
+        <div class="eyebrow" style="color:var(--blush)">Real account · real numbers</div>
+        <h2 class="display">FIRST 2 WEEKS OF MANAGEMENT.</h2>
+        <div class="case-badge">Ginger Hair by Lillie · case study in progress</div>
+        <p class="case-copy">
+          Social By George started by taking over the Instagram of Ginger Hair by Lillie — a hairdresser working in high-end salons who was too busy with clients to give social media the time it needed.
+        </p>
+        <p class="case-copy">
+          During the first two-week management window, the account recorded the results shown here while the focus shifted towards clearer positioning, stronger content and a more intentional posting strategy.
+        </p>
+        <div class="case-note">Figures are Instagram-reported results from the two-week management window provided by the account owner. This is an ongoing case study and results are not a guarantee of future performance.</div>
+      </div>
+
+      <div class="stats">
+        <div class="stat reveal"><strong>6.1K</strong><span>Views</span></div>
+        <div class="stat reveal"><strong>45%</strong><span>Views from non-followers</span></div>
+        <div class="stat reveal"><strong>+47</strong><span>Followers</span></div>
+        <div class="stat reveal"><strong>246</strong><span>Profile visits</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="beforeafter">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">WHAT CHANGES WHEN SOCIAL GETS A PLAN.</h2>
+        <p>The aim is not to make every account look the same. It is to replace reactive posting with a clearer system.</p>
+      </div>
+
+      <div class="ba-grid">
+        <div class="ba-card reveal">
+          <div class="eyebrow">Before management</div>
+          <h3>Social fits around everything else.</h3>
+          <ul>
+            <li>Posting depends on spare time</li>
+            <li>Good client work is not always turned into useful content</li>
+            <li>Calls to action can be inconsistent</li>
+            <li>There is no monthly content system</li>
+            <li>Results are difficult to learn from without regular review</li>
+          </ul>
+        </div>
+        <div class="ba-card after reveal">
+          <div class="eyebrow">With a management system</div>
+          <h3>Every post has a job.</h3>
+          <ul>
+            <li>Defined content pillars and monthly direction</li>
+            <li>Client results, education and personality used intentionally</li>
+            <li>Clearer calls to action and profile journey</li>
+            <li>Content planned before it is needed</li>
+            <li>Performance reviewed and used to shape the next month</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">WAYS TO WORK WITH ME.</h2>
+        <p>Choose the level of support that matches how much of your social media you want to keep in-house.</p>
+      </div>
+
+      <div class="founding reveal">
+        <strong>FOUNDING CLIENT RATES</strong>
+        <span>Introductory launch pricing for a limited number of early Social By George clients while the portfolio and case-study library grows. Future rates may increase.</span>
+      </div>
+
+      <div class="pricing">
+        <article class="price-card reveal">
+          <div class="eyebrow">One-off</div>
+          <h3>Social Strategy</h3>
+          <div class="price">£50 <small>one-off</small></div>
+          <p>For businesses that want clarity and direction before creating more content.</p>
+          <ul class="feature-list">
+            <li>Profile & content audit</li>
+            <li>Positioning recommendations</li>
+            <li>Content pillars</li>
+            <li>Posting direction</li>
+            <li>CTA recommendations</li>
+            <li>Simple action plan</li>
+          </ul>
+          <a class="btn btn-light" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ENQUIRE ON INSTAGRAM</a>
+        </article>
+
+        <article class="price-card featured reveal">
+          <span class="tag">Monthly</span>
+          <div class="eyebrow" style="color:var(--blush)">Content support</div>
+          <h3>Content Support</h3>
+          <div class="price">£150 <small>/ month</small></div>
+          <p>For businesses that want the plan, copy and creative support while still staying involved in posting.</p>
+          <ul class="feature-list">
+            <li>Monthly strategy</li>
+            <li>Content plan</li>
+            <li>Captions & hooks</li>
+            <li>Branded graphics / carousels</li>
+            <li>Reel ideas & editing support</li>
+            <li>Monthly analytics review</li>
+          </ul>
+          <a class="btn" style="background:var(--blush);color:var(--ink);border-color:var(--blush)" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ENQUIRE ON INSTAGRAM</a>
+        </article>
+
+        <article class="price-card reveal">
+          <div class="eyebrow">Done-for-you</div>
+          <h3>Full Social Management</h3>
+          <div class="price">£300 <small>from / month</small></div>
+          <p>For businesses that want Instagram managed with a clear monthly strategy and content system.</p>
+          <ul class="feature-list">
+            <li>Strategy & monthly planning</li>
+            <li>8–12 main content pieces*</li>
+            <li>Captions, hooks & CTAs</li>
+            <li>Editing / branded design</li>
+            <li>Scheduling & posting</li>
+            <li>Profile optimisation</li>
+            <li>Monthly performance report</li>
+            <li>Ongoing optimisation</li>
+          </ul>
+          <a class="btn btn-dark" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ENQUIRE ON INSTAGRAM</a>
+        </article>
+      </div>
+
+      <div class="scope-note reveal">
+        <strong>*Scope is confirmed in your proposal.</strong> Full management starts from £300 and varies with posting volume, platform requirements and content workload. Clients provide raw photos/video unless an Essex content session is added. Paid advertising, professional photography, website design, influencer management and email marketing are not included in the launch packages.
+      </div>
+    </div>
+  </section>
+
+  <section class="compare">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">WHAT'S THE DIFFERENCE?</h2>
+        <p>A quick side-by-side so you can see what you are actually paying for.</p>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr><th>Included</th><th>Strategy £50</th><th>Content £150/mo</th><th>Management from £300/mo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Profile / content review</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+            <tr><td>Content pillars & direction</td><td class="tick">✓</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+            <tr><td>Monthly content plan</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+            <tr><td>Captions, hooks & CTAs</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+            <tr><td>Graphics / carousel design</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+            <tr><td>Reel editing support</td><td class="dash">—</td><td class="tick">✓</td><td class="tick">✓</td></tr>
+            <tr><td>Scheduling & publishing</td><td class="dash">—</td><td class="dash">—</td><td class="tick">✓</td></tr>
+            <tr><td>Profile optimisation</td><td>Recommendations</td><td>Recommendations</td><td class="tick">✓</td></tr>
+            <tr><td>Monthly reporting</td><td class="dash">—</td><td>Analytics review</td><td class="tick">✓</td></tr>
+            <tr><td>Ongoing optimisation</td><td class="dash">—</td><td>Light</td><td class="tick">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="monthly">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">WHAT YOU ACTUALLY GET EACH MONTH.</h2>
+        <p>Not random posting. A repeatable workflow that moves from strategy to creation, approval, publishing and review.</p>
+      </div>
+
+      <div class="deliver-grid">
+        <div class="deliver reveal"><div class="icon">01</div><div><h3>Direction</h3><p>Monthly priorities, content pillars, offers, launches and the messages your audience needs to see.</p></div></div>
+        <div class="deliver reveal"><div class="icon">02</div><div><h3>Content</h3><p>Hooks, captions, carousels, graphics and Reel support designed around the strategy.</p></div></div>
+        <div class="deliver reveal"><div class="icon">03</div><div><h3>Approval</h3><p>You review planned content before anything is published so you stay in control of your brand.</p></div></div>
+        <div class="deliver reveal"><div class="icon">04</div><div><h3>Review</h3><p>Performance is checked so the next month is shaped by what the account is actually doing.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="first30">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">YOUR FIRST 30 DAYS.</h2>
+        <p>A structured start so we do not rush straight into posting before understanding the business.</p>
+      </div>
+      <div class="weeks">
+        <div class="week reveal"><div class="weekno">01</div><h3>Audit & onboarding</h3><p>Access, goals, current performance, competitors, offers and brand information are reviewed.</p></div>
+        <div class="week reveal"><div class="weekno">02</div><h3>Strategy & plan</h3><p>Content pillars, audience priorities, calls to action and the first content plan are built.</p></div>
+        <div class="week reveal"><div class="weekno">03</div><h3>Create & approve</h3><p>Content is written, designed or edited, then sent through the agreed approval process.</p></div>
+        <div class="week reveal"><div class="weekno">04</div><h3>Publish & learn</h3><p>Content goes live and early performance starts shaping the next round of decisions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">THE KIND OF CONTENT I BUILD.</h2>
+        <p>Sample Social By George creative showing the mix of strategy, educational content and branded design available within the service.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="sample large berry reveal">
+          <span class="label">Carousel concept</span>
+          <h3>YOUR INSTAGRAM HAS 5 SECONDS.</h3>
+          <p>Strong opening hooks, clear hierarchy and a reason to keep swiping.</p>
+          <div class="mock-ui"><div class="line"></div><div class="line m"></div><div class="line s"></div></div>
+          <div class="reel-ring"></div>
+        </div>
+
+        <div class="sample blush reveal">
+          <span class="label">Educational content</span>
+          <h3>PRETTY ISN'T ENOUGH.</h3>
+          <p>Content that teaches, positions and builds trust.</p>
+          <div class="mock-ui"><div class="line"></div><div class="line m"></div></div>
+        </div>
+
+        <div class="sample black reveal">
+          <span class="label">Reel cover</span>
+          <h3>3 SOCIAL MISTAKES.</h3>
+          <p>Clear, recognisable cover systems that make a grid feel intentional.</p>
+          <div class="mock-ui"><div class="line"></div><div class="line s"></div></div>
+        </div>
+
+        <div class="sample reveal">
+          <span class="label">Offer post</span>
+          <h3>READY TO GROW?</h3>
+          <p>Direct-response creative that tells people what to do next.</p>
+          <div class="mock-ui"><div class="line m"></div><div class="line s"></div></div>
+        </div>
+
+        <div class="sample berry reveal">
+          <span class="label">Results post</span>
+          <h3>REAL ACCOUNT. REAL NUMBERS.</h3>
+          <p>Proof-led posts that turn performance into trust.</p>
+          <div class="mock-ui"><div class="line"></div><div class="line m"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="container">
+      <div class="why-grid">
+        <div class="reveal">
+          <div class="eyebrow">Why Social By George</div>
+          <h2 class="display">CREATIVE AGENCY THINKING. PERSONAL SUPPORT.</h2>
+        </div>
+        <div class="why-card reveal">
+          <p>I am not trying to turn every business into the same template. The aim is to understand what makes your service valuable, then build a social presence that looks polished, feels current and supports the next stage of the business.</p>
+          <p>Expect clear communication, organised planning, honest feedback and content with a reason behind it.</p>
+          <div class="values">
+            <span class="pill">Organised</span><span class="pill">Creative</span><span class="pill">Calm</span>
+            <span class="pill">Direct</span><span class="pill">Supportive</span><span class="pill">Premium</span><span class="pill">Ambitious</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fit-grid">
+        <div class="fit-card reveal">
+          <div class="eyebrow">We could be a good fit if...</div>
+          <h3>You want a proper system.</h3>
+          <ul>
+            <li>You care about how your business is presented</li>
+            <li>You can provide raw client work / footage where needed</li>
+            <li>You are willing to plan ahead rather than post last-minute</li>
+            <li>You want strategy, not just filler posts</li>
+            <li>You understand growth is built over time</li>
+          </ul>
+        </div>
+        <div class="fit-card not reveal">
+          <div class="eyebrow">Probably not the right fit if...</div>
+          <h3>You want instant guarantees.</h3>
+          <ul>
+            <li>You need guaranteed follower or booking numbers</li>
+            <li>You want unlimited content at a fixed starter price</li>
+            <li>You cannot supply approvals or business information on time</li>
+            <li>You are looking for paid ads or a full marketing department</li>
+            <li>You want content copied directly from competitors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="collab">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">WHAT I NEED FROM YOU.</h2>
+        <p>The best management relationships are collaborative. I handle the social system; you give me access to the business I am representing.</p>
+      </div>
+
+      <div class="collab-grid">
+        <div class="collab-card reveal">
+          <div class="eyebrow">01 · Access</div>
+          <h3>Brand & account information</h3>
+          <p>Your services, pricing, booking journey, offers, audience, brand assets and the account access needed for the agreed scope.</p>
+        </div>
+        <div class="collab-card reveal">
+          <div class="eyebrow">02 · Raw content</div>
+          <h3>Your real work</h3>
+          <p>Photos, videos, client results and behind-the-scenes footage where required. I can give you a clear shot list so you know what to capture.</p>
+        </div>
+        <div class="collab-card reveal">
+          <div class="eyebrow">03 · Approvals</div>
+          <h3>Feedback on time</h3>
+          <p>Planned content is approved before publishing. Timely feedback helps the calendar stay consistent and keeps your brand accurate.</p>
+        </div>
+      </div>
+
+      <div class="security-strip reveal">
+        <strong>Account access & security</strong>
+        <p>Where possible, account access is handled through official platform permissions such as Meta Business tools rather than casually sharing passwords. Exact access requirements are agreed during onboarding.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">WHAT SUCCESS ACTUALLY LOOKS LIKE.</h2>
+        <p style="color:#d8cbd0">Followers matter, but they are only one signal. The goal is to understand whether your content is attracting and moving the right people.</p>
+      </div>
+      <div class="metric-grid">
+        <div class="metric reveal"><strong>Reach</strong><span>Are more people discovering the account?</span></div>
+        <div class="metric reveal"><strong>Non-followers</strong><span>Is content reaching people outside the existing audience?</span></div>
+        <div class="metric reveal"><strong>Profile visits</strong><span>Is content making people curious enough to learn more?</span></div>
+        <div class="metric reveal"><strong>Engagement</strong><span>Are people saving, sharing, commenting and interacting?</span></div>
+        <div class="metric reveal"><strong>Enquiries</strong><span>Are the right people starting conversations?</span></div>
+        <div class="metric reveal"><strong>Bookings</strong><span>Where trackable, is social contributing to real business?</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contentday">
+    <div class="container contentday-grid">
+      <div class="reveal">
+        <div class="eyebrow">For Essex businesses</div>
+        <h2 class="display">NEED CONTENT TOO?</h2>
+        <p class="body-copy">If the hardest part is actually capturing enough usable footage, local content support can be added separately for businesses within a practical Essex travel area.</p>
+        <p class="body-copy">This is social-first content capture — not a replacement for a professional brand photographer or videographer.</p>
+        <a class="btn btn-berry" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ASK ABOUT AN ESSEX CONTENT DAY</a>
+      </div>
+      <div class="content-box reveal">
+        <ul>
+          <li>Reel / B-roll shot list</li>
+          <li>Service and process footage</li>
+          <li>Team / personality content</li>
+          <li>Before-and-after capture guidance</li>
+          <li>Short-form vertical clips</li>
+          <li>Content organised around the monthly strategy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <div class="eyebrow">About George</div>
+        <h2 class="display">THE MAN BEHIND THE STRATEGY.</h2>
+      </div>
+      <div class="reveal">
+        <div class="about-story">
+          I’m George, 26, based in Maldon, Essex. Social By George started because my sister is a hairdresser working in high-end salons — and like a lot of brilliant beauty professionals, her time was better spent with clients than trying to plan and manage Instagram.
+          <br><br>
+          I started running her hair account and saw first-hand the gap between doing great work and presenting it properly online.
+          <br><br>
+          That became Social By George: social media support for beauty, grooming and wellness businesses that want their online presence to feel as considered as the service they deliver.
+        </div>
+        <div class="about-note">Same passion. Different perspective.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">HOW WE GET STARTED.</h2>
+        <p>A clear onboarding process before management begins.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="n">01</div><h3>DM</h3><p>Message @socialbygeorge and tell me about your business.</p></div>
+        <div class="step reveal"><div class="n">02</div><h3>Discovery chat</h3><p>We talk through goals, current social and what support makes sense.</p></div>
+        <div class="step reveal"><div class="n">03</div><h3>Questionnaire</h3><p>You share the brand, services, audience and practical details I need.</p></div>
+        <div class="step reveal"><div class="n">04</div><h3>Proposal & contract</h3><p>You receive scope, pricing, responsibilities and agreed terms.</p></div>
+        <div class="step reveal"><div class="n">05</div><h3>Payment</h3><p>The first payment secures the agreed start date.</p></div>
+        <div class="step reveal"><div class="n">06</div><h3>Onboarding</h3><p>Access, strategy, approvals and content workflow are set up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="areas">
+    <div class="container areas-grid">
+      <div class="reveal">
+        <div class="eyebrow" style="color:var(--blush)">Essex + online</div>
+        <h2 class="display">LOCAL WHEN YOU NEED IT. ONLINE WHEN YOU DON'T.</h2>
+      </div>
+      <div class="reveal">
+        <p>Social By George is based in Maldon and works with businesses across Essex as well as fully online. Local support may be available around areas including:</p>
+        <div class="towns">
+          <span>Maldon</span><span>Chelmsford</span><span>Southend</span><span>Leigh-on-Sea</span><span>Colchester</span><span>Basildon</span><span>Wickford</span><span>Wider Essex</span><span>UK-wide online</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="audit">
+    <div class="container audit-inner reveal">
+      <div class="eyebrow">Not ready to commit?</div>
+      <h2 class="display">DM “AUDIT” FOR A FREE MINI INSTAGRAM REVIEW.</h2>
+      <p>Send me your account and I’ll give you a short outside perspective on what is working, what could be clearer and one or two things I would focus on next.</p>
+      <a class="btn btn-dark" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM “AUDIT” @SOCIALBYGEORGE ↗</a>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container faq-grid">
+      <div class="reveal">
+        <div class="eyebrow">FAQs</div>
+        <h2 class="display">BEFORE WE WORK TOGETHER.</h2>
+      </div>
+      <div class="reveal">
+        <details open>
+          <summary>Do I have to film content myself?</summary>
+          <p>For most monthly services you will need to supply some real photos or video from the business because you are there with the clients, services and results. I can give you clear shot lists and filming direction. Essex content support can also be quoted separately.</p>
+        </details>
+        <details>
+          <summary>Do you only work with businesses in Essex?</summary>
+          <p>No. I’m based in Maldon, Essex, but Social By George can work fully online with businesses elsewhere in the UK.</p>
+        </details>
+        <details>
+          <summary>Do you guarantee followers, enquiries or bookings?</summary>
+          <p>No. No responsible social media manager can guarantee specific organic results. I focus on the things we can control: strategy, content quality, positioning, consistency, calls to action and ongoing optimisation.</p>
+        </details>
+        <details>
+          <summary>How long should I give social media management?</summary>
+          <p>For full management, I usually recommend allowing around three months to establish the strategy, build consistency and collect enough performance data to make useful decisions. Exact terms are confirmed in your proposal.</p>
+        </details>
+        <details>
+          <summary>How does content approval work?</summary>
+          <p>Content is planned and shared through the agreed approval process before publishing. This keeps you in control of service details, pricing, offers and how the brand is represented.</p>
+        </details>
+        <details>
+          <summary>Do you need my password?</summary>
+          <p>Where possible, I prefer official platform permissions and business access tools rather than casual password sharing. The safest practical setup for your account is agreed during onboarding.</p>
+        </details>
+        <details>
+          <summary>Do you manage comments and DMs?</summary>
+          <p>Community support can be included where agreed, but detailed client enquiries, medical questions, pricing decisions or booking conversations may still need to be handled by you or your team.</p>
+        </details>
+        <details>
+          <summary>Do you run paid ads?</summary>
+          <p>Not currently. The launch offer focuses on organic social media strategy, content and management.</p>
+        </details>
+        <details>
+          <summary>What platforms do you manage?</summary>
+          <p>Instagram is the main launch focus. Other platforms can be discussed depending on the package and what your business actually needs.</p>
+        </details>
+        <details>
+          <summary>When will you reply to me?</summary>
+          <p>Client communication is handled during normal working days. Exact communication channels, approval deadlines and expected response times are set during onboarding so there are clear boundaries on both sides.</p>
+        </details>
+        <details>
+          <summary>How do I get started?</summary>
+          <p>DM @socialbygeorge on Instagram. Tell me what you do, where you are based, what is frustrating you about social media and which package you are interested in.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-inner reveal">
+      <div class="eyebrow" style="color:var(--blush)">Currently accepting founding clients</div>
+      <h2 class="display">LET'S MAKE YOUR SOCIAL LOOK AS GOOD AS YOUR BUSINESS.</h2>
+      <p>Your work already deserves attention. The job now is making sure your online presence communicates the same standard.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-white" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM TO ENQUIRE ↗</a>
+        <a class="btn" style="border-color:#fff;color:#fff" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM “AUDIT”</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal" id="legal">
+    <div class="container">
+      <div class="legal-grid">
+        <details>
+          <summary>Privacy notice</summary>
+          <p>This launch website does not contain a direct enquiry form and does not intentionally collect personal information through the site itself. Enquiries are currently directed to Instagram, where Meta/Instagram's own privacy terms apply. If analytics, cookies, email forms or other data-collection tools are added later, this notice should be updated before they are used.</p>
+        </details>
+        <details>
+          <summary>Website & service information</summary>
+          <p>Website prices are introductory “from” rates and the exact scope is confirmed in a written proposal before work begins. Social media performance varies by business, audience, content, market and platform behaviour; no specific follower, reach, enquiry or booking result is guaranteed. Formal service terms are set out in the client agreement.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="#home" class="brand">SOCIAL <span>BY GEORGE</span></a>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#legal">Privacy & terms</a>
+        <a href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+      <small>© 2026 Social By George</small>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM “AUDIT”</a>
+    <a href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ENQUIRE</a>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold:.10});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    const menuBtn = document.querySelector('.menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuBtn?.addEventListener('click',()=>{
+      const isOpen = navLinks.style.display === 'flex';
+      if(isOpen){
+        navLinks.removeAttribute('style');
+        return;
+      }
+      navLinks.style.display='flex';
+      navLinks.style.position='absolute';
+      navLinks.style.top='76px';
+      navLinks.style.left='0';
+      navLinks.style.right='0';
+      navLinks.style.flexDirection='column';
+      navLinks.style.alignItems='flex-start';
+      navLinks.style.background='#F5F0EA';
+      navLinks.style.padding='22px';
+      navLinks.style.borderBottom='1px solid rgba(17,17,17,.14)';
+    });
+
+    navLinks?.querySelectorAll('a').forEach(link=>{
+      link.addEventListener('click',()=>{
+        if(window.innerWidth <= 1040) navLinks.removeAttribute('style');
+      });
+    });
+  </script>
+</body>
+</html>
