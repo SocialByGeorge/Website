@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Social By George | Social Media Management for Beauty Brands</title>
+  <meta name="description" content="Premium social media strategy, content and management for beauty, grooming and wellness businesses across Essex and online.">
+  <meta name="theme-color" content="#8E294E">
+  <style>
+    :root{
+      --ivory:#F5F0EA;--paper:#FBF8F4;--ink:#111111;--berry:#8E294E;--berry-dark:#641D38;
+      --blush:#E6C7CF;--taupe:#B7AAA1;--stone:#D9D0C9;--white:#fff;--line:rgba(17,17,17,.14);
+      --shadow:0 20px 65px rgba(41,20,28,.12);--serif:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}.container{width:min(1180px,calc(100% - 40px));margin:auto}
+    .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:800;color:var(--berry)}
+    .display{font-family:var(--serif);font-weight:600;letter-spacing:-.055em;line-height:.9;margin:0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;font-weight:800;border:1.5px solid var(--ink);transition:.22s ease}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--ink)}.btn-dark{background:var(--ink);color:#fff}.btn-berry{background:var(--berry);color:#fff;border-color:var(--berry)}.btn-light{background:var(--paper)}
+    .pill{display:inline-flex;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.09em;font-size:.7rem;font-weight:800}
+    .nav{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);backdrop-filter:blur(18px);background:rgba(245,240,234,.9)}
+    .nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-family:var(--serif);font-size:1.45rem;font-weight:700;line-height:.85}.brand span{display:block;font-family:var(--sans);font-size:.56rem;letter-spacing:.34em;margin-top:6px}
+    .nav-links{display:flex;gap:24px;align-items:center;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:800}.nav-links a{position:relative}.nav-links a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--berry);transition:.2s}.nav-links a:hover:after{right:0}.menu{display:none;background:none;border:0;font-size:1.6rem}
+    .hero{position:relative;overflow:hidden;padding:92px 0 78px;min-height:780px;background:radial-gradient(circle at 83% 25%,rgba(142,41,78,.13),transparent 29%),radial-gradient(circle at 70% 70%,rgba(230,199,207,.55),transparent 30%),var(--ivory)}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:48% 52% 44% 56%;pointer-events:none}.hero:before{width:430px;height:430px;right:-110px;top:60px;background:linear-gradient(145deg,rgba(142,41,78,.95),rgba(230,199,207,.55));transform:rotate(26deg)}.hero:after{width:340px;height:340px;right:110px;bottom:-100px;border:45px solid rgba(255,255,255,.45);background:rgba(142,41,78,.12);transform:rotate(-16deg)}
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}.hero h1{font-size:clamp(4.5rem,8.5vw,8.8rem);max-width:840px}.hero h1 .sub{display:block;color:var(--berry)}.hero-copy{max-width:650px;font-size:1.12rem;line-height:1.62;margin:26px 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero-meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800}
+    .hero-card{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center}.editorial-card{position:relative;width:min(470px,92%);min-height:470px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);padding:42px;transform:rotate(3deg);overflow:hidden}
+    .editorial-card:before{content:"";position:absolute;width:300px;height:85px;background:var(--berry);right:-60px;top:55px;transform:rotate(-12deg);opacity:.95}.editorial-card:after{content:"";position:absolute;width:240px;height:240px;border:1px solid rgba(17,17,17,.15);border-radius:50%;left:-90px;bottom:-70px}.editorial-card .mini{text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;font-weight:800}.editorial-card h3{font-family:var(--serif);font-size:4.2rem;line-height:.92;letter-spacing:-.04em;margin:90px 0 18px;max-width:330px}.editorial-card h3 span{color:var(--berry)}.editorial-card p{max-width:330px;line-height:1.55;font-size:.96rem}.scribble{position:absolute;right:25px;bottom:30px;transform:rotate(-7deg);font-family:"Brush Script MT","Segoe Script",cursive;font-size:2rem;color:var(--berry-dark)}
+    .marquee{overflow:hidden;background:var(--ink);color:#fff}.track{display:flex;width:max-content;gap:34px;padding:16px 0;animation:marquee 26s linear infinite;font-family:var(--serif);font-size:1.4rem;font-weight:600}.track span{white-space:nowrap}.track b{color:var(--blush)}@keyframes marquee{to{transform:translateX(-50%)}}
+    section{padding:96px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.section-head h2{font-size:clamp(3.2rem,6.4vw,6.8rem);max-width:820px}.section-head p{max-width:450px;font-size:1rem;line-height:1.62}
+    .audience{background:var(--ink);color:#fff}.audience-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.audience-card{min-height:190px;padding:22px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(160deg,#1a1a1a,#251a1e);display:flex;flex-direction:column;justify-content:end;transition:.2s}.audience-card:hover{background:var(--berry-dark);transform:translateY(-6px)}.audience-card .num{color:var(--blush);font-size:.72rem;letter-spacing:.14em;font-weight:800}.audience-card h3{font-family:var(--serif);font-size:1.5rem;margin:12px 0 4px}.audience-card p{font-size:.84rem;line-height:1.45;color:#d8d0cc}
+    .problem{background:var(--paper)}.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.problem h2{font-size:clamp(3.4rem,6.2vw,6.5rem)}.problem-list{display:grid;gap:16px}.problem-item{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}.problem-item strong{font-family:var(--serif);font-size:1.45rem}.problem-item span{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--blush);font-weight:900;color:var(--berry-dark)}
+    .services{background:var(--ivory)}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price-card{position:relative;background:var(--paper);border:1px solid var(--line);padding:32px;min-height:540px;display:flex;flex-direction:column;transition:.22s}.price-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}.price-card.featured{background:var(--berry-dark);color:#fff}.tag{position:absolute;top:18px;right:18px;border:1px solid currentColor;padding:7px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.1em;font-size:.62rem;font-weight:800}.price-card h3{font-family:var(--serif);font-size:2.4rem;margin:30px 0 8px}.price{font-family:var(--serif);font-size:3.8rem;line-height:1;margin:10px 0 20px}.price small{font-family:var(--sans);font-size:.85rem;font-weight:500}.price-card p{line-height:1.55}.feature-list{display:grid;gap:10px;margin:22px 0 30px;padding:0;list-style:none}.feature-list li:before{content:"✓";margin-right:10px;color:var(--berry);font-weight:900}.featured .feature-list li:before{color:var(--blush)}.price-card .btn{margin-top:auto}.addon{margin-top:20px;padding:18px 20px;border:1px dashed var(--taupe);background:rgba(255,255,255,.4);font-size:.9rem;line-height:1.5}
+    .why{background:var(--paper)}.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}.why h2{font-size:clamp(3.4rem,6.4vw,6.6rem)}.why-card{background:var(--blush);padding:40px;border:1px solid rgba(142,41,78,.2);box-shadow:14px 14px 0 var(--berry)}.why-card p{font-size:1.08rem;line-height:1.65}.values{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .case{background:var(--ink);color:#fff}.case-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:center}.case h2{font-size:clamp(3.5rem,6.6vw,6.8rem)}.case-copy{line-height:1.62;color:#ded7d4}.case-badge{display:inline-flex;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:.1em;font-size:.65rem;font-weight:800;margin:14px 0 24px}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.stat{background:var(--ivory);color:var(--ink);padding:26px;min-height:155px;position:relative}.stat strong{font-family:var(--serif);font-size:3.2rem;display:block;line-height:1}.stat span{display:block;margin-top:10px;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;font-weight:800}.stat:after{content:"↗";position:absolute;right:18px;top:14px;color:var(--berry);font-size:1.6rem}.case-note{margin-top:16px;font-size:.78rem;color:#b9b0ac;line-height:1.5}
+    .about{background:var(--ivory)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.about h2{font-size:clamp(3.5rem,6.6vw,6.8rem)}.about-story{border-left:4px solid var(--berry);padding-left:28px;font-size:1.07rem;line-height:1.72}.about-note{margin-top:20px;font-family:var(--serif);font-size:2rem;color:var(--berry)}
+    .process{background:var(--paper)}.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.step{border-top:2px solid var(--ink);padding:20px 8px 0 0}.step .n{font-family:var(--serif);font-size:2.2rem;color:var(--berry)}.step h3{margin:12px 0 8px;font-family:var(--serif);font-size:1.45rem}.step p{font-size:.86rem;line-height:1.5;color:#514c48}
+    .faq{background:var(--ivory)}.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}.faq h2{font-size:clamp(3.5rem,6.4vw,6.6rem)}details{border-top:1px solid var(--ink);padding:20px 0}summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-weight:800}summary:after{content:"+";color:var(--berry);font-size:1.35rem}details[open] summary:after{content:"–"}details p{margin:14px 0 0;line-height:1.6;color:#514c48}
+    .cta{position:relative;overflow:hidden;background:var(--berry-dark);color:#fff;padding:105px 0;text-align:center}.cta:before,.cta:after{content:"";position:absolute;width:480px;height:110px;background:var(--blush);opacity:.25;border-radius:50%}.cta:before{left:-140px;top:30px;transform:rotate(-15deg)}.cta:after{right:-140px;bottom:30px;transform:rotate(18deg)}.cta-inner{position:relative;z-index:2}.cta h2{font-size:clamp(4rem,8vw,8.2rem);max-width:980px;margin:0 auto 24px}.cta p{max-width:650px;margin:0 auto 28px;line-height:1.6;color:#eadfe3;font-size:1.06rem}
+    footer{border-top:1px solid var(--line);background:var(--ivory);padding:28px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-links{display:flex;gap:18px;font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:980px){.nav-links{display:none}.menu{display:block}.hero-grid,.problem-grid,.why-grid,.case-grid,.about-grid,.faq-grid{grid-template-columns:1fr}.hero-card{min-height:500px}.audience-grid{grid-template-columns:repeat(3,1fr)}.pricing{grid-template-columns:1fr}.steps{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:640px){.container{width:min(100% - 24px,1180px)}section{padding:72px 0}.hero{padding:62px 0 58px;min-height:auto}.hero h1{font-size:4.25rem}.hero-card{min-height:420px}.editorial-card{padding:30px;min-height:390px}.editorial-card h3{font-size:3.2rem;margin-top:70px}.audience-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.cta h2{font-size:4.2rem}.nav .btn{display:none}}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">SOCIAL <span>BY GEORGE</span></a>
+    <div class="nav-links">
+      <a href="#who">Who I work with</a><a href="#services">Services</a><a href="#results">Results</a><a href="#about">About</a><a href="#process">Process</a><a href="#faq">FAQs</a>
+    </div>
+    <a class="btn btn-berry" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM @socialbygeorge ↗</a>
+    <button class="menu" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Essex-based • working locally & online</div>
+      <h1 class="display">YOUR WORK IS PREMIUM. <span class="sub">YOUR SOCIAL SHOULD BE TOO.</span></h1>
+      <p class="hero-copy">Social media strategy, content and management for beauty, grooming and wellness businesses that want a stronger online presence without having to manage it all themselves.</p>
+      <div class="hero-actions">
+        <a class="btn btn-berry" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM TO ENQUIRE →</a>
+        <a class="btn btn-light" href="#services">VIEW SERVICES</a>
+      </div>
+      <div class="hero-meta"><span>Strategy</span><span>Content</span><span>Management</span><span>Analytics</span></div>
+    </div>
+    <div class="hero-card reveal">
+      <div class="editorial-card">
+        <div class="mini">Social By George</div>
+        <h3>BEAUTY BRANDS, <span>BRIGHTER ONLINE.</span></h3>
+        <p>Clear strategy. Better content. Stronger visibility. A social presence that actually reflects the quality of your business.</p>
+        <div class="scribble">strategy first.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track"><span>HAIR <b>✦</b> NAILS <b>✦</b> LASHES <b>✦</b> AESTHETICS <b>✦</b> BARBERS <b>✦</b> IV & WELLNESS CLINICS <b>✦</b></span><span>HAIR <b>✦</b> NAILS <b>✦</b> LASHES <b>✦</b> AESTHETICS <b>✦</b> BARBERS <b>✦</b> IV & WELLNESS CLINICS <b>✦</b></span></div></div>
+
+<section class="audience" id="who">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="display">BUILT FOR BEAUTY, GROOMING & WELLNESS.</h2>
+      <p>From solo specialists to established salons and clinics, Social By George is for businesses that want to look more professional, stay consistent and get more from social media.</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-card reveal"><div class="num">01</div><h3>Hair</h3><p>Stylists, colourists, extension specialists and salons.</p></div>
+      <div class="audience-card reveal"><div class="num">02</div><h3>Nails</h3><p>Nail techs, beauty bars and independent studios.</p></div>
+      <div class="audience-card reveal"><div class="num">03</div><h3>Lashes & Brows</h3><p>Lash artists, brow specialists and beauty professionals.</p></div>
+      <div class="audience-card reveal"><div class="num">04</div><h3>Aesthetics</h3><p>Clinics, injectors, skin and aesthetics businesses.</p></div>
+      <div class="audience-card reveal"><div class="num">05</div><h3>Grooming</h3><p>Barbers, men's grooming and premium service brands.</p></div>
+      <div class="audience-card reveal"><div class="num">06</div><h3>Wellness</h3><p>IV clinics, wellness studios and modern health-led brands.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container problem-grid">
+    <div class="reveal">
+      <div class="eyebrow">The problem</div>
+      <h2 class="display">YOU'RE GREAT AT WHAT YOU DO. YOUR INSTAGRAM SHOULD SHOW IT.</h2>
+    </div>
+    <div class="problem-list reveal">
+      <div class="problem-item"><span>1</span><div><strong>You're busy with clients.</strong><p>Social media gets pushed to the bottom of the list because the actual business comes first.</p></div></div>
+      <div class="problem-item"><span>2</span><div><strong>Your content feels inconsistent.</strong><p>You know your work is good, but your page doesn't always reflect the quality of the service.</p></div></div>
+      <div class="problem-item"><span>3</span><div><strong>You don't know what to post.</strong><p>Posting without a plan makes social media feel like another job rather than a growth tool.</p></div></div>
+      <div class="problem-item"><span>4</span><div><strong>You're getting attention, not enough action.</strong><p>The goal is to turn stronger content into visibility, trust, enquiries and eventually bookings.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="display">WAYS TO WORK WITH ME.</h2>
+      <p>Three levels of support depending on how much of your social media you want to keep in-house.</p>
+    </div>
+    <div class="pricing">
+      <article class="price-card reveal">
+        <div class="eyebrow">One-off</div><h3>Social Strategy</h3><div class="price">£195 <small>one-off</small></div>
+        <p>For businesses that want clarity, direction and a proper plan before creating more content.</p>
+        <ul class="feature-list"><li>Profile and content audit</li><li>Brand positioning</li><li>Content pillars</li><li>Monthly content direction</li><li>CTA strategy</li><li>Posting recommendations</li></ul>
+        <a class="btn btn-light" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ENQUIRE ON INSTAGRAM</a>
+      </article>
+      <article class="price-card featured reveal">
+        <span class="tag">Popular</span><div class="eyebrow" style="color:var(--blush)">Monthly</div><h3>Content Support</h3><div class="price">£395 <small>/ month</small></div>
+        <p>For beauty businesses that want the strategy and content support, while still keeping some control in-house.</p>
+        <ul class="feature-list"><li>Monthly strategy</li><li>Content plan</li><li>Captions</li><li>Branded graphics & carousels</li><li>Reel ideas / editing support</li><li>Scheduling support</li><li>Monthly analytics</li></ul>
+        <a class="btn" style="background:var(--blush);color:var(--ink);border-color:var(--blush)" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ENQUIRE ON INSTAGRAM</a>
+      </article>
+      <article class="price-card reveal">
+        <div class="eyebrow">Done-for-you</div><h3>Full Social Management</h3><div class="price">£695 <small>/ month</small></div>
+        <p>For businesses that want social media taken off their plate with a more complete monthly management service.</p>
+        <ul class="feature-list"><li>Strategy & planning</li><li>Content creation</li><li>Captions</li><li>Scheduling & posting</li><li>Community support</li><li>Profile optimisation</li><li>Analytics & monthly reporting</li><li>Ongoing management</li></ul>
+        <a class="btn btn-dark" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">ENQUIRE ON INSTAGRAM</a>
+      </article>
+    </div>
+    <div class="addon reveal"><strong>Essex content-day add-on:</strong> local filming / content capture can be quoted separately depending on location, time and what your business needs.</div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container why-grid">
+    <div class="reveal"><div class="eyebrow">Why Social By George</div><h2 class="display">CREATIVE AGENCY THINKING. PERSONAL SUPPORT.</h2></div>
+    <div class="why-card reveal">
+      <p>I’m not trying to turn every brand into the same template. The aim is to understand what makes your business valuable, then build a social presence that looks polished, feels current and supports the next stage of your growth.</p>
+      <p>Expect clear communication, organised planning, honest feedback and content with a reason behind it.</p>
+      <div class="values"><span class="pill">Organised</span><span class="pill">Creative</span><span class="pill">Calm</span><span class="pill">Direct</span><span class="pill">Supportive</span><span class="pill">Premium</span><span class="pill">Ambitious</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="case" id="results">
+  <div class="container case-grid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--blush)">Client work</div><h2 class="display">GINGER HAIR BY LILLIE.</h2><div class="case-badge">Case study in progress</div>
+      <p class="case-copy">Ginger Hair by Lillie is the first account behind Social By George. Lillie is a hairdresser working in high-end salons, and I started managing her Instagram because her time was better spent with clients than trying to plan, write and organise content.</p>
+      <p class="case-copy">The account is being used to test what actually drives reach, follows, profile activity and — over time — genuine enquiries and bookings.</p>
+      <div class="case-note">The figures shown are real Instagram-reported September metrics. This is an ongoing case study, not a guarantee of future results.</div>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><strong>6.1K</strong><span>Views</span></div>
+      <div class="stat reveal"><strong>45%</strong><span>Views from non-followers</span></div>
+      <div class="stat reveal"><strong>+47</strong><span>Followers</span></div>
+      <div class="stat reveal"><strong>246</strong><span>Profile visits</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="reveal"><div class="eyebrow">About George</div><h2 class="display">THE MAN BEHIND THE STRATEGY.</h2></div>
+    <div class="reveal">
+      <div class="about-story">I’m George, 26, based in Maldon, Essex. Social By George started because my sister is a hairdresser working in high-end salons, and like a lot of brilliant beauty professionals, she was too busy with clients to give Instagram the time it needed.<br><br>I started running her hair account, and that gave me a much clearer look at the gap between doing great work and actually presenting it well online.<br><br>That became the idea behind Social By George: helping beauty, grooming and wellness businesses look as professional online as they are in real life.</div>
+      <div class="about-note">Same passion. Different perspective.</div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head reveal"><h2 class="display">HOW IT WORKS.</h2><p>A simple onboarding process so everything feels clear before any content goes live.</p></div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h3>DM</h3><p>Message @socialbygeorge and tell me a little about your business.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Discovery chat</h3><p>We talk through your goals, current social media and what support would help most.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Questionnaire</h3><p>You complete a short onboarding questionnaire so I can understand the brand properly.</p></div>
+      <div class="step reveal"><div class="n">04</div><h3>Proposal & contract</h3><p>I send the scope, pricing, terms and what the next month will look like.</p></div>
+      <div class="step reveal"><div class="n">05</div><h3>Payment</h3><p>Once everything is agreed, the first payment secures your start date.</p></div>
+      <div class="step reveal"><div class="n">06</div><h3>Onboarding</h3><p>Access, strategy, content planning and monthly workflow are set up before launch.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container faq-grid">
+    <div class="reveal"><div class="eyebrow">FAQs</div><h2 class="display">BEFORE WE WORK TOGETHER.</h2></div>
+    <div class="reveal">
+      <details open><summary>Do I have to film content myself?</summary><p>For most monthly services, you’ll still need to capture some raw content from your business because you’re there with the clients, services and results. I can tell you exactly what to film and how to send it over. Local content-day support can also be quoted separately.</p></details>
+      <details><summary>Do you only work with businesses in Essex?</summary><p>No. I’m based in Maldon, Essex and can support local businesses in person where relevant, but Social By George also works fully online.</p></details>
+      <details><summary>Do you guarantee followers or bookings?</summary><p>No. Social media doesn’t work like that. I focus on stronger strategy, better content, clearer positioning, consistency and ongoing optimisation. Those are the things we can control and improve.</p></details>
+      <details><summary>Do you run paid ads?</summary><p>Not currently. The focus is organic social media strategy, content and management.</p></details>
+      <details><summary>What platforms do you manage?</summary><p>Instagram is the main focus at launch. Other platforms can be discussed depending on the package and what your business actually needs.</p></details>
+      <details><summary>How do I get started?</summary><p>DM @socialbygeorge on Instagram with a little about your business, what you’re struggling with and what you want social media to achieve.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <div class="eyebrow" style="color:var(--blush)">Currently open for clients</div>
+    <h2 class="display">LET'S MAKE YOUR SOCIAL LOOK AS GOOD AS YOUR BUSINESS.</h2>
+    <p>If your work is strong but your social media isn’t showing it, let’s fix the gap. Message me on Instagram and tell me what you do.</p>
+    <a class="btn" style="background:var(--ivory);color:var(--ink);border-color:var(--ivory)" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM @SOCIALBYGEORGE ↗</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <a href="#home" class="brand">SOCIAL <span>BY GEORGE</span></a>
+    <div class="footer-links"><a href="#services">Services</a><a href="#results">Results</a><a href="#about">About</a><a href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">Instagram ↗</a></div>
+    <small>© 2026 Social By George</small>
+  </div>
+</footer>
+
+<script>
+  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  const menuBtn=document.querySelector('.menu'),navLinks=document.querySelector('.nav-links');
+  menuBtn?.addEventListener('click',()=>{const isOpen=navLinks.style.display==='flex';if(isOpen){navLinks.style.display='';return}navLinks.style.display='flex';navLinks.style.position='absolute';navLinks.style.top='76px';navLinks.style.left='0';navLinks.style.right='0';navLinks.style.flexDirection='column';navLinks.style.alignItems='flex-start';navLinks.style.background='#F5F0EA';navLinks.style.padding='22px';navLinks.style.borderBottom='1px solid rgba(17,17,17,.14)'});
+</script>
+
+</body>
+</html>
