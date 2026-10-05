@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social By George | Social Media for Beauty Brands</title>
+  <meta name="description" content="Social media strategy, content and management for hair, nails, lashes, aesthetics and grooming brands. Social By George helps beauty businesses stand out, stay consistent and grow.">
+  <meta name="theme-color" content="#ff2f83">
+  <meta property="og:title" content="Social By George">
+  <meta property="og:description" content="Social media that turns heads. Strategy, content and management for beauty brands.">
+  <meta property="og:type" content="website">
+  <style>
+    :root{
+      --ink:#17100f;
+      --choc:#2c1715;
+      --cream:#fff7ef;
+      --paper:#fffaf6;
+      --blush:#ffd7e3;
+      --pink:#ff2f83;
+      --hot:#f10866;
+      --rose:#ff7eaa;
+      --peach:#ffc8b3;
+      --white:#fff;
+      --line:rgba(23,16,15,.18);
+      --shadow:0 22px 65px rgba(74,22,42,.14);
+      --radius:28px;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button,a{touch-action:manipulation}
+    .container{width:min(1180px,calc(100% - 36px));margin:0 auto}
+    .eyebrow{
+      font-size:.76rem;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--hot);
+    }
+    .display{
+      font-family:var(--serif);font-weight:700;line-height:.88;letter-spacing:-.055em;margin:0;
+    }
+    .script{
+      font-family:"Brush Script MT","Segoe Script",cursive;font-weight:600;transform:rotate(-4deg);
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:12px 18px;
+      font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;
+      border:2px solid var(--ink);background:var(--paper);
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:52px;padding:0 22px;border-radius:999px;font-weight:900;
+      text-transform:uppercase;letter-spacing:.075em;font-size:.78rem;transition:.2s ease;
+      border:2px solid var(--ink);cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-3px) rotate(-.5deg);box-shadow:0 10px 0 var(--ink)}
+    .btn-pink{background:var(--pink);color:white}
+    .btn-light{background:var(--paper)}
+    .btn-dark{background:var(--ink);color:white}
+    .nav{
+      position:sticky;top:0;z-index:50;background:rgba(255,247,239,.92);backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:900;font-size:1.28rem;line-height:.9}
+    .brand span{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.35em;margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:.76rem;font-weight:900;text-transform:uppercase}
+    .nav-links a{position:relative}
+    .nav-links a:after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:3px;background:var(--pink);transition:.2s}
+    .nav-links a:hover:after{right:0}
+    .hamb{display:none;background:none;border:0;font-size:1.7rem}
+
+    .hero{
+      position:relative;min-height:770px;padding:76px 0 58px;overflow:hidden;
+      background:
+        radial-gradient(circle at 76% 22%, rgba(255,47,131,.18), transparent 28%),
+        radial-gradient(circle at 90% 62%, rgba(255,126,170,.26), transparent 20%),
+        var(--cream);
+    }
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:38px;align-items:center}
+    .hero h1{font-size:clamp(4.6rem,9vw,8.5rem);max-width:780px}
+    .hero h1 .pink{color:var(--pink);display:block}
+    .hero-copy{font-size:1.16rem;line-height:1.55;max-width:640px;margin:24px 0}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+    .micro{display:flex;gap:16px;flex-wrap:wrap;font-size:.74rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+    .micro span:after{content:"+";color:var(--pink);margin-left:16px}
+    .micro span:last-child:after{display:none}
+    .hero-art{position:relative;height:630px}
+    .phone{
+      position:absolute;left:16%;top:2%;width:58%;height:520px;background:var(--paper);border:5px solid var(--ink);
+      border-radius:46px;box-shadow:var(--shadow);transform:rotate(7deg);padding:20px;z-index:3;
+    }
+    .phone:before{
+      content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34%;height:28px;background:var(--ink);border-radius:20px;
+    }
+    .screen{height:100%;border-radius:28px;background:linear-gradient(160deg,#fff5ee,#ffd4e1);padding:76px 22px 22px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+    .screen strong{font-family:var(--serif);font-size:3rem;line-height:.9}
+    .screen .script{font-size:2.7rem;margin:14px 0}
+    .sticker{
+      position:absolute;background:var(--pink);color:white;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);
+      border-radius:22px;padding:16px 18px;font-weight:900;text-transform:uppercase;z-index:5;
+    }
+    .s1{right:1%;top:8%;transform:rotate(7deg)}
+    .s2{left:3%;bottom:18%;transform:rotate(-8deg);background:var(--paper);color:var(--ink)}
+    .heart{
+      position:absolute;right:3%;bottom:6%;font-size:7rem;color:var(--pink);transform:rotate(12deg);z-index:2
+    }
+    .brush{
+      position:absolute;width:76%;height:120px;right:-15%;top:54%;background:var(--pink);
+      transform:rotate(-17deg);border-radius:50% 12% 46% 20%;
+      box-shadow:0 -18px 0 rgba(255,126,170,.45);z-index:1;
+    }
+    .scribble{position:absolute;right:4%;top:31%;font-size:2.1rem;z-index:6}
+
+    .marquee{background:var(--ink);color:white;overflow:hidden;border-block:2px solid var(--ink)}
+    .marquee-track{
+      display:flex;width:max-content;gap:34px;padding:18px 0;font-family:var(--serif);font-size:1.55rem;font-weight:700;
+      animation:marq 24s linear infinite;
+    }
+    .marquee-track span{white-space:nowrap}
+    .marquee-track b{color:var(--pink)}
+    @keyframes marq{to{transform:translateX(-50%)}}
+
+    section{padding:96px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+    .section-head h2{font-size:clamp(3.1rem,6vw,6.2rem);max-width:800px}
+    .section-head p{max-width:430px;font-size:1.03rem;line-height:1.55}
+
+    .audience{background:var(--choc);color:white}
+    .audience .display .pink{color:#ff88b2}
+    .niches{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .niche{
+      background:linear-gradient(145deg,#ffd1df,#ffb8cf);color:var(--ink);
+      min-height:230px;border-radius:130px 130px 28px 28px;border:2px solid rgba(255,255,255,.15);
+      padding:28px 16px 20px;text-align:center;display:flex;flex-direction:column;justify-content:center;
+      transition:.2s;
+    }
+    .niche:hover{transform:translateY(-8px) rotate(1deg)}
+    .niche .ico{font-size:3.6rem;margin-bottom:16px}
+    .niche strong{font-family:var(--serif);font-size:1.55rem}
+    .niche small{margin-top:8px;line-height:1.4}
+
+    .services{background:var(--paper)}
+    .services-grid{display:grid;grid-template-columns:1fr 1.45fr;gap:34px}
+    .service-intro{padding:20px 0}
+    .service-intro h2{font-size:clamp(3.4rem,6vw,6.6rem)}
+    .service-intro .pink{color:var(--pink)}
+    .service-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .service-card{
+      padding:30px;border:2px solid var(--ink);border-radius:24px;min-height:260px;position:relative;overflow:hidden;
+      background:var(--cream);transition:.2s;
+    }
+    .service-card:nth-child(odd){background:var(--blush)}
+    .service-card:hover{transform:translateY(-7px);box-shadow:9px 9px 0 var(--ink)}
+    .service-card .num{font-size:.75rem;font-weight:900;letter-spacing:.2em;color:var(--hot)}
+    .service-card h3{font-family:var(--serif);font-size:2rem;margin:18px 0 10px}
+    .service-card p{line-height:1.55}
+    .service-card .arr{position:absolute;right:22px;bottom:20px;width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center}
+
+    .process{background:linear-gradient(180deg,#ffd8e4,#ffb3cc)}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{border-top:3px solid var(--ink);padding-top:22px}
+    .step .circle{width:58px;height:58px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:1.4rem}
+    .step h3{font-family:var(--serif);font-size:2rem;margin:18px 0 8px}
+    .step p{line-height:1.5}
+
+    .results{background:var(--choc);color:white}
+    .result-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+    .result-grid h2{font-size:clamp(3.6rem,7vw,7rem)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .stat{background:#ffd8e3;color:var(--ink);border-radius:22px;padding:24px;border:2px solid #ff9dbd;position:relative}
+    .stat strong{font-family:var(--serif);font-size:3rem;display:block}
+    .stat span{font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.12em}
+    .stat:after{content:"↗";position:absolute;right:18px;top:14px;font-size:1.7rem;color:var(--hot)}
+    .case-note{margin-top:20px;color:#ffd8e3;line-height:1.55}
+    .case-tag{display:inline-flex;margin-top:24px;background:var(--pink);padding:13px 16px;border-radius:999px;font-weight:900;color:white;transform:rotate(-2deg)}
+
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .about h2{font-size:clamp(3.8rem,7vw,7rem)}
+    .about .pink{color:var(--pink)}
+    .about-copy{font-size:1.08rem;line-height:1.65}
+    .quote-card{position:relative;background:var(--blush);border:2px solid var(--ink);border-radius:30px;padding:42px;box-shadow:12px 12px 0 var(--pink)}
+    .quote-card .script{font-size:3rem}
+    .values{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+    .club{background:linear-gradient(135deg,#ffbfd3 0%,#fff4ee 58%,#ff85ad 100%)}
+    .club-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+    .club h2{font-size:clamp(3.8rem,7vw,7.2rem)}
+    .club h2 .pink{color:var(--hot)}
+    .club-box{background:var(--ink);color:white;border-radius:30px;padding:34px;box-shadow:14px 14px 0 white}
+    .club-box .price{font-family:var(--serif);font-size:4rem;color:#ff9fc1}
+    .club-list{display:grid;gap:12px;margin:20px 0}
+    .club-list div:before{content:"✓";color:#ff7baa;font-weight:900;margin-right:10px}
+
+    .faq{background:var(--paper)}
+    .faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px}
+    .faq h2{font-size:clamp(3.6rem,7vw,6.8rem)}
+    details{border-top:2px solid var(--ink);padding:20px 0}
+    summary{font-weight:900;cursor:pointer;display:flex;justify-content:space-between;gap:20px}
+    details p{line-height:1.6;margin:16px 0 0;color:#54433f}
+    summary::marker{display:none}
+    summary:after{content:"+";font-size:1.5rem;color:var(--pink)}
+    details[open] summary:after{content:"–"}
+
+    .cta{
+      background:var(--ink);color:white;position:relative;overflow:hidden;padding:100px 0;
+    }
+    .cta:before,.cta:after{content:"";position:absolute;background:var(--pink);width:400px;height:110px;border-radius:50%;transform:rotate(-16deg)}
+    .cta:before{left:-120px;top:30px}.cta:after{right:-100px;bottom:30px;transform:rotate(18deg)}
+    .cta-inner{position:relative;z-index:2;text-align:center}
+    .cta h2{font-size:clamp(4rem,8vw,8rem);max-width:970px;margin:0 auto 26px}
+    .cta h2 .pink{color:#ff90b7}
+    .cta p{max-width:630px;margin:0 auto 28px;font-size:1.08rem;line-height:1.55}
+
+    footer{padding:30px 0;background:var(--cream);border-top:1px solid var(--line)}
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .socials{display:flex;gap:14px;font-weight:900}
+
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    @media(max-width:900px){
+      .nav-links{display:none}.hamb{display:block}
+      .hero{padding-top:50px}.hero-grid,.services-grid,.result-grid,.about-grid,.club-grid,.faq-grid{grid-template-columns:1fr}
+      .hero-art{height:540px;margin-top:20px}
+      .phone{left:22%;width:58%;height:450px}.screen strong{font-size:2.4rem}.screen .script{font-size:2.2rem}
+      .niches{grid-template-columns:repeat(2,1fr)} .niche:last-child{grid-column:1/-1}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .section-head{align-items:start;flex-direction:column}
+      .service-cards{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      .container{width:min(100% - 24px,1180px)}
+      section{padding:70px 0}
+      .hero{min-height:auto}
+      .hero h1{font-size:4.15rem}
+      .hero-art{height:455px}
+      .phone{width:68%;left:14%;height:390px}
+      .sticker{font-size:.7rem;padding:12px}
+      .s1{right:2%;top:4%}.s2{bottom:12%;left:0}
+      .scribble{font-size:1.55rem;right:0}
+      .niches,.service-cards,.stats,.process-grid{grid-template-columns:1fr}
+      .niche:last-child{grid-column:auto}
+      .niche{min-height:185px;border-radius:100px 100px 24px 24px}
+      .micro{gap:8px}.micro span:after{margin-left:8px}
+      .cta h2{font-size:4.2rem}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">SOCIAL <div><span>BY GEORGE</span></div></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#club">Content Club</a>
+        <a href="#results">Results</a>
+        <a href="#faq">FAQs</a>
+      </div>
+      <a class="btn btn-pink" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM @SOCIALBYGEORGE ↗</a>
+      <button class="hamb" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">Social media management for beauty brands</div>
+        <h1 class="display">SOCIAL THAT TURNS <span class="pink">HEADS.</span></h1>
+        <p class="hero-copy">I help beauty businesses show up beautifully online with scroll-stopping content, strategy and social media management that actually moves the brand forward.</p>
+        <div class="hero-actions">
+          <a class="btn btn-pink" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">WORK WITH ME →</a>
+          <a class="btn btn-light" href="#services">VIEW SERVICES</a>
+        </div>
+        <div class="micro"><span>Strategy</span><span>Content</span><span>Management</span><span>Growth</span></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="brush"></div>
+        <div class="phone">
+          <div class="screen">
+            <strong>Good Content.</strong>
+            <div class="script">Bigger Clients.</div>
+            <div class="pill" style="margin:20px auto 0;">BEAUTY BRANDS • BRIGHTER ONLINE</div>
+          </div>
+        </div>
+        <div class="sticker s1">Real strategy.<br>Real results.</div>
+        <div class="sticker s2">♥ Content that converts</div>
+        <div class="scribble script">More clients.<br>Less stress.</div>
+        <div class="heart">♥</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>HAIR <b>✦</b> NAILS <b>✦</b> LASHES <b>✦</b> AESTHETICS <b>✦</b> GROOMING <b>✦</b> BEAUTY BRANDS <b>✦</b></span>
+      <span>HAIR <b>✦</b> NAILS <b>✦</b> LASHES <b>✦</b> AESTHETICS <b>✦</b> GROOMING <b>✦</b> BEAUTY BRANDS <b>✦</b></span>
+    </div>
+  </div>
+
+  <section class="audience">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">BEAUTY BRANDS THAT <span class="pink">STAND OUT.</span></h2>
+        <p>Built for ambitious beauty businesses that want a social presence with personality, polish and purpose.</p>
+      </div>
+      <div class="niches">
+        <div class="niche reveal"><div class="ico">〰</div><strong>Hair</strong><small>Salons, stylists & colour specialists</small></div>
+        <div class="niche reveal"><div class="ico">▰</div><strong>Nails</strong><small>Nail techs & beauty bars</small></div>
+        <div class="niche reveal"><div class="ico">⌒</div><strong>Lashes</strong><small>Lash techs & brow artists</small></div>
+        <div class="niche reveal"><div class="ico">✦</div><strong>Aesthetics</strong><small>Clinics & skin specialists</small></div>
+        <div class="niche reveal"><div class="ico">✂</div><strong>Grooming</strong><small>Barbers & men's grooming</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container services-grid">
+      <div class="service-intro reveal">
+        <div class="eyebrow">Services</div>
+        <h2 class="display">SOCIAL SUPPORT THAT <span class="pink">DELIVERS.</span></h2>
+        <p style="font-size:1.05rem;line-height:1.6;max-width:470px;">Whether you need a clear strategy, hands-on management or a content system you can run yourself, there's a way to work together.</p>
+      </div>
+      <div class="service-cards">
+        <div class="service-card reveal"><div class="num">01</div><h3>Strategy</h3><p>A focused social media strategy built around your brand, audience, goals and services.</p><div class="arr">→</div></div>
+        <div class="service-card reveal"><div class="num">02</div><h3>Content Creation</h3><p>On-brand concepts, hooks, captions, carousels and Reels designed to stop the scroll.</p><div class="arr">→</div></div>
+        <div class="service-card reveal"><div class="num">03</div><h3>Monthly Management</h3><p>Planning, scheduling, optimisation and reporting so your socials keep moving while you work.</p><div class="arr">→</div></div>
+        <div class="service-card reveal"><div class="num">04</div><h3>Content Club</h3><p>Ready-to-use ideas, templates, trends and prompts for beauty businesses that want to DIY smarter.</p><div class="arr">→</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 class="display">A SIMPLE PROCESS FOR <span style="color:var(--hot)">REAL RESULTS.</span></h2>
+        <p>Clear strategy first. Then content with intention. Then we review what actually worked and build from it.</p>
+      </div>
+      <div class="process-grid">
+        <div class="step reveal"><div class="circle">01</div><h3>Audit</h3><p>I review your current social presence, audience, positioning and what needs to change.</p></div>
+        <div class="step reveal"><div class="circle">02</div><h3>Plan</h3><p>We build a strategy and monthly content direction around your business goals.</p></div>
+        <div class="step reveal"><div class="circle">03</div><h3>Create</h3><p>Content is planned, written, designed and scheduled with consistency built in.</p></div>
+        <div class="step reveal"><div class="circle">04</div><h3>Grow</h3><p>We track performance, learn from the data and refine the strategy every month.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="results" id="results">
+    <div class="container result-grid">
+      <div class="reveal">
+        <div class="eyebrow" style="color:#ff9fc1">Client snapshot</div>
+        <h2 class="display">REAL BRAND.<br><span style="color:#ff94b8">REAL GROWTH.</span></h2>
+        <p class="case-note">Ginger Hair by Lillie — September Instagram snapshot. A beauty account using consistent branded content, stronger positioning and personality-led posts to build visibility.</p>
+        <span class="case-tag">Case study in progress ↗</span>
+      </div>
+      <div class="stats">
+        <div class="stat reveal"><strong>6.1K</strong><span>Views</span></div>
+        <div class="stat reveal"><strong>45%</strong><span>Non-follower views</span></div>
+        <div class="stat reveal"><strong>+47</strong><span>Followers</span></div>
+        <div class="stat reveal"><strong>246</strong><span>Profile visits</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <div class="eyebrow">About George</div>
+        <h2 class="display">THE MAN BEHIND <span class="pink">THE STRATEGY.</span></h2>
+      </div>
+      <div class="reveal">
+        <div class="quote-card">
+          <div class="script">Same passion. Different perspective.</div>
+          <p class="about-copy">I'm George, a social media manager focused on the beauty industry. I help beauty businesses create content that looks polished, feels current and supports real growth — without losing the personality that makes the brand theirs.</p>
+          <div class="values"><span class="pill">Beauty obsessed</span><span class="pill">Strategy led</span><span class="pill">Results driven</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="club" id="club">
+    <div class="container club-grid">
+      <div class="reveal">
+        <div class="eyebrow">The Content Club</div>
+        <h2 class="display">FRESH IDEAS <span class="pink">EVERY MONTH.</span></h2>
+        <p style="font-size:1.08rem;line-height:1.6;max-width:560px;">A monthly membership for beauty business owners who want fresh content ideas, ready-to-use prompts, captions, templates and trend inspiration without staring at a blank screen.</p>
+      </div>
+      <div class="club-box reveal">
+        <div class="eyebrow" style="color:#ff9fc1">Founding member offer</div>
+        <div class="price">£15<span style="font-family:var(--sans);font-size:1rem"> / month</span></div>
+        <div class="club-list">
+          <div>Monthly beauty content plan</div>
+          <div>Caption + hook bank</div>
+          <div>Reel ideas + scripts</div>
+          <div>Editable template concepts</div>
+          <div>Weekly trend inspiration</div>
+          <div>Members content library</div>
+        </div>
+        <a class="btn btn-pink" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">JOIN THE WAITLIST →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container faq-grid">
+      <div class="reveal">
+        <div class="eyebrow">FAQs</div>
+        <h2 class="display">GOOD QUESTION.</h2>
+      </div>
+      <div class="reveal">
+        <details open><summary>Who do you work with?</summary><p>Social By George is built for hair, nails, lashes, aesthetics, grooming and other beauty-led businesses. The goal is always the same: clearer positioning, stronger content and a social presence that feels as good as the service.</p></details>
+        <details><summary>Do I need to create the content myself?</summary><p>That depends on the service. For management clients, I can give you clear capture instructions so you film the raw material while I handle the strategy, structure, copy, design and publishing plan.</p></details>
+        <details><summary>Can you guarantee followers or bookings?</summary><p>No one can honestly guarantee a specific number. I focus on building a stronger system: better content, more qualified reach, clearer calls to action, consistent reporting and ongoing optimisation.</p></details>
+        <details><summary>How do I enquire?</summary><p>DM @socialbygeorge on Instagram. Tell me what your business does, what you currently struggle with and what you'd like social media to achieve.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contact">
+    <div class="container cta-inner reveal">
+      <div class="eyebrow" style="color:#ff9fc1">Let's make your brand</div>
+      <h2 class="display">IMPOSSIBLE TO <span class="pink">SCROLL PAST.</span></h2>
+      <p>Ready for a social presence with more clarity, personality and impact? DM me on Instagram and tell me about your brand.</p>
+      <a class="btn btn-pink" href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">DM @SOCIALBYGEORGE ↗</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <a class="brand" href="#home">SOCIAL <div><span>BY GEORGE</span></div></a>
+      <div class="socials">
+        <a href="https://www.instagram.com/socialbygeorge/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#services">Services</a>
+        <a href="#club">Content Club</a>
+      </div>
+      <small>© 2026 Social By George</small>
+    </div>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.querySelector('.hamb')?.addEventListener('click',()=>{
+      const nav=document.querySelector('.nav-links');
+      if(!nav) return;
+      const open=getComputedStyle(nav).display!=='none';
+      nav.style.display=open?'none':'flex';
+      nav.style.position='absolute';
+      nav.style.top='74px';
+      nav.style.left='0';
+      nav.style.right='0';
+      nav.style.padding='22px';
+      nav.style.background='#fff7ef';
+      nav.style.flexDirection='column';
+      nav.style.borderBottom='1px solid rgba(0,0,0,.12)';
+    });
+  </script>
+</body>
+</html>
